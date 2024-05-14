@@ -4,7 +4,7 @@ from app.schemas.user_schema import UserAuth, UserOut
 from app.services.user_service import UserService
 import pymongo
 
-user_router = APIRouter(prefix="/user")
+user_router = APIRouter()
 
 @user_router.post("/create", response_model=UserOut)
 async def create_user(user: UserAuth):

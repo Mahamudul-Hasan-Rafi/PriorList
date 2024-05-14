@@ -34,8 +34,8 @@ class User(Document):
     
 
     @classmethod
-    async def by_email(self, email: str) -> "User":
-        return await self.find_one(self.email==email)
+    async def by_username(self, username: str) -> "User":
+        return await self.find_one(self.username==username)
 
     class Settings:
         name = "users"
